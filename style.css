@@ -1,0 +1,31 @@
+#main, #main2 {
+    display: flex;                  /* Align the bars horizontally */
+    justify-content: space-evenly;  /* Space the bars evenly */
+    align-items: flex-end;          /* Align bars at the bottom */
+    height: 40vh;                  /* Set a fixed height for the container */
+    width: auto;                    /* Set width to cover the available space */
+    border: 1px solid #000;         /* Optional: Add border around the chart */
+}
+
+.bar {
+    display: inline-block;          /* Make each <span> act like a block */
+    width: 10px;                    /* Set a fixed width for each bar */
+    margin: 0 1px;                  /* Add space between bars */
+    background-color: #3498db;      /* Bar color */
+    text-align: center;             /* Align text inside bars */
+    color: white;                   /* White text color */
+    font-weight: bold;              /* Make the number bold */
+    transition: height 0.5s ease-in-out; /* Smooth transition for height changes */
+}
+
+.touched {
+    background-color: #1a75b1 !important;
+}
+
+.bar::before {
+    content: attr(class);           /* Display the number above the bar */
+    position: absolute;
+    top: -20px;                     /* Position the number above the bar */
+    left: 50%;
+    transform: translateX(-50%);
+}

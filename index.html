@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<script src="quicksort.js"></script>
+<script>
+    SPEED = 500;
+    window.onload = function () {
+
+        function generateRandomArray(size, range) {
+            let numbers = new Set();
+            while (numbers.size < size) {
+                const randomNum = Math.floor(Math.random() * range) + 1;
+                numbers.add(randomNum);
+            }
+            return Array.from(numbers).map(num => ({ num: num, touched: false }));
+        }
+
+        let arr = generateRandomArray(100, 100);
+        let arr2 = structuredClone(arr);;
+
+
+        script1.init(arr);
+        script2.init(arr2);
+    };
+</script>
+<body>
+
+
+
+
+<div id="main"></div>
+<div id="main2"></div>
+
+
+<input id="slider" type="range" min="10" max="1000" value="500">
+<button id="start" type="button">Start</button>
+
+</body>
+</html>
