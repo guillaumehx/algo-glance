@@ -1,21 +1,4 @@
 const script2 = {
-    init: function (array) {
-
-        script2.render(array);
-    
-        let slider = document.getElementById('slider');
-        slider.addEventListener('mousemove', () => { SPEED = 1000 - slider.value; });
-    
-        let start = document.getElementById('start');
-        let isStarted = false;
-        start.addEventListener('click', () => {
-            if (!isStarted) {
-                isStarted = true;
-                script2.quickSort(array);
-            }
-        });
-    },
-
     setRed: function(i) {
         document.querySelectorAll('#main2 .bar').forEach(bar => {
             if (parseInt(bar.id) === i) {

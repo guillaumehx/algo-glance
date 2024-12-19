@@ -1,24 +1,7 @@
 const script1 = {
-    init: function (array) {
-
-        script1.render(array);
-    
-        let slider = document.getElementById('slider');
-        slider.addEventListener('mousemove', () => { SPEED = 1000 - slider.value; });
-    
-        let start = document.getElementById('start');
-        let isStarted = false;
-        start.addEventListener('click', () => {
-            if (!isStarted) {
-                isStarted = true;
-                script1.selectionSort(array);
-                //script1.bubbleSort(array);          
-                //script1.mergeSort(array);
-            }
-        });
-    },
-
-
+        //script1.selectionSort(array);
+        //script1.bubbleSort(array);          
+        //script1.mergeSort(array);
     setRed: function(i) {
         document.querySelectorAll('#main .bar').forEach(bar => {
             if (parseInt(bar.id) === i) {

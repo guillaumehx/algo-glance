@@ -9,6 +9,7 @@
 <script>
     SPEED = 500;
     window.onload = function () {
+
         function generateRandomArray(size, range) {
             let numbers = new Set();
             while (numbers.size < size) {
@@ -19,10 +20,22 @@
         }
 
         let array = generateRandomArray(100, 100);
-        let arrayCopy = structuredClone(array);;
+        let arrayCopy = structuredClone(array);
 
-        script1.init(array);
-        script2.init(arrayCopy);
+        script1.render(array);
+        script2.render(arrayCopy);
+
+        let slider = document.getElementById('slider');
+        slider.addEventListener('mousemove', () => { SPEED = 1000 - slider.value; });
+    
+        let start = document.getElementById('start');
+        let isStarted = false;
+        start.addEventListener('click', () => {
+            if (!isStarted) {
+                script1.selectionSort(array);
+                script2.quickSort(arrayCopy);
+            }
+        });        
     };
 </script>
 <body>
