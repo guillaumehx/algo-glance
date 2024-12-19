@@ -6,7 +6,6 @@ const script2 = {
             }
         });
     },
-    
     setBlue: function(i) {
         document.querySelectorAll('#main2 .bar').forEach(bar => {
             if (parseInt(bar.id) === i) {
@@ -14,7 +13,6 @@ const script2 = {
             }
         });
     },
-    
     setGreen: function(i) {
         document.querySelectorAll('#main2 .bar').forEach(bar => {
             if (parseInt(bar.id) === i) {
@@ -39,7 +37,6 @@ const script2 = {
     
         script2.setHeight();
     },
-    
     setHeight: function() {
         document.querySelectorAll('#main2 .bar').forEach(bar => {
             let value = parseInt(bar.id);
@@ -47,17 +44,14 @@ const script2 = {
             bar.style.height = `${height}px`;
         });
     },
-
     pause: function(ms) {
         return new Promise(resolve => setTimeout(resolve, ms))
     },
-
     setBlueForAllBars: function() {
         document
             .querySelectorAll('#main2 .bar')
             .forEach(bar => bar.style.backgroundColor = "#1A75B1");
     },
-
     quickSort: async function(arr, left = 0, right = arr.length - 1) {
         // Partition function: Rearranges elements and returns the pivot index
         async function partition(arr, left, right) {
