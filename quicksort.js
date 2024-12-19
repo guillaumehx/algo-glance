@@ -1,7 +1,6 @@
 const script2 = {
     init: function (array) {
 
-        //let array = script2.generateRandomArray(100, 100);
         script2.render(array);
     
         let slider = document.getElementById('slider');
@@ -12,7 +11,6 @@ const script2 = {
         start.addEventListener('click', () => {
             if (!isStarted) {
                 isStarted = true;
-                //selectionSort(array);            
                 script2.quickSort(array);
             }
         });

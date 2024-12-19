@@ -1,7 +1,6 @@
 const script1 = {
     init: function (array) {
 
-        //let array = script1.generateRandomArray(100, 100);
         script1.render(array);
     
         let slider = document.getElementById('slider');
