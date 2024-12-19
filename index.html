@@ -4,47 +4,13 @@
 <title>Page Title</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<script src="selectionsort.js"></script>
 <script src="quicksort.js"></script>
-<script>
-    SPEED = 500;
-    window.onload = function () {
-
-        function generateRandomArray(size, range) {
-            let numbers = new Set();
-            while (numbers.size < size) {
-                const randomNum = Math.floor(Math.random() * range) + 1;
-                numbers.add(randomNum);
-            }
-            return Array.from(numbers).map(num => ({ num: num, touched: false }));
-        }
-
-        let array = generateRandomArray(100, 100);
-        let arrayCopy = structuredClone(array);
-
-        script1.render(array);
-        script2.render(arrayCopy);
-
-        let slider = document.getElementById('slider');
-        slider.addEventListener('mousemove', () => { SPEED = 1000 - slider.value; });
-    
-        let start = document.getElementById('start');
-        let isStarted = false;
-        start.addEventListener('click', () => {
-            if (!isStarted) {
-                script1.selectionSort(array);
-                script2.quickSort(arrayCopy);
-            }
-        });        
-    };
-</script>
+<script src="script.js"></script>
 <body>
-
-<div id="main"></div>
-<div id="main2"></div>
-
-<input id="slider" type="range" min="10" max="1000" value="500">
-<button id="start" type="button">Start</button>
-
+    <div id="main"></div>
+    <div id="main2"></div>
+    <input id="slider" type="range" min="10" max="1000" value="500">
+    <button id="start" type="button">Start</button>
 </body>
 </html>
