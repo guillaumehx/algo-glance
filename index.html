@@ -9,7 +9,6 @@
 <script>
     SPEED = 500;
     window.onload = function () {
-
         function generateRandomArray(size, range) {
             let numbers = new Set();
             while (numbers.size < size) {
@@ -19,12 +18,11 @@
             return Array.from(numbers).map(num => ({ num: num, touched: false }));
         }
 
-        let arr = generateRandomArray(100, 100);
-        let arr2 = structuredClone(arr);;
+        let array = generateRandomArray(100, 100);
+        let arrayCopy = structuredClone(array);;
 
-
-        script1.init(arr);
-        script2.init(arr2);
+        script1.init(array);
+        script2.init(arrayCopy);
     };
 </script>
 <body>

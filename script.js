@@ -12,9 +12,9 @@ const script1 = {
         start.addEventListener('click', () => {
             if (!isStarted) {
                 isStarted = true;
-                //script1.selectionSort(array);
+                script1.selectionSort(array);
                 //script1.bubbleSort(array);          
-                script1.mergeSort(array);
+                //script1.mergeSort(array);
             }
         });
     },
